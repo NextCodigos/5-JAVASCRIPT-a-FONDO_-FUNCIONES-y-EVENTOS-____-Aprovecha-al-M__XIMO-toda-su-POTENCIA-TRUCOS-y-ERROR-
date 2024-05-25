@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  font-size:2.2rem;
+}
+.caja{
+  text-align:center;
+}
+button{
+  width:430px;
+  border-radius:15px;
+}
+.circulo {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(30, 73, 126);
+  border-radius: 50%;
+  margin-top: 20px;
+  /* Ajusta el margen superior según tu diseño */
+  cursor: pointer;
+  /* Cambia el cursor al pasar sobre el círculo */
+}
