@@ -1,33 +1,35 @@
-const MINOMBRE="Jab";
-const IVA=0.21;
-let cantidad = 2;
-let precio = 4;
-// Pongo return en funcion y no hace falta
-// let resultadoFinal;
-// Llamo a la funcion
+const MINOMBRE = "BENI Y OLEG";
+const IVA = 0.21;
+let Cantidad = 200;
+let precio = 0.4;
 
 // Llamada a funciones
 saludar();
-escribir(calcularIVA(cantidad*precio,cantidad,precio,IVA));
+// saludar();
+escribir(calcularIVA(Cantidad * precio, Cantidad, precio, IVA));
 
-function saludar(){
-    escribir(`Hola ${MINOMBRE}`);
+function saludar() {
+  escribir(`Hola ${MINOMBRE}`);
 }
 
-function calcularIVA(resultado,cantidad,precio,IVA){
-    let result=resultado*IVA;
-    let suma=cantidad*precio;
-    // Ejemplo1
-    // let valores={resultado:result,suma:suma}
+function calcularIVA(resultado, Cantidad, precio, IVA) {
+  let result = resultado * IVA;
+  let suma = Cantidad * precio;
 
-    // return valores;
-    // Ejemplo2:
-    return {resultado:result,suma:suma};
+  // Ejemplo2:
+  return { resultado: result, suma: suma };
 }
 
-function escribir(valor){
-    let primerValor=valor.resultado;
-    let segundoValor=valor.suma;
-    // document.querySelector(".caja").innerHTML=valor;
-    document.querySelector(".caja").innerHTML+=`<div>${primerValor} (${segundoValor})</div>`;
+function escribir(valor) {
+  // Verifica si 'valor' es un objeto o un string
+  if (typeof valor === "object") {
+    let primerValor = valor.resultado;
+    let segundoValor = valor.suma;
+    document.querySelector(
+      ".caja"
+    ).innerHTML += `<div>${primerValor} (${segundoValor})</div>`;
+  } else {
+    // Si es un string, lo muestra directamente
+    document.querySelector(".caja").innerHTML += `<div>${valor}</div>`;
+  }
 }

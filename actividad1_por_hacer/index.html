@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -14,5 +14,118 @@
   <div class="circulo"></div>
   
   <script src="js/index.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad "Eventos y funciones"</title>
+    <style>
+        /* Estilos básicos para la estructura */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Asegura que el body ocupa toda la altura de la pantalla */
+        }
+        header {
+            background-color: #f0f0f0;
+            padding: 1em;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav li {
+            margin: 0 1em;
+        }
+        nav a {
+            display: block;
+            padding: 0.5em 1em;
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            flex-grow: 1; /* Permite que el main se expanda para ocupar el espacio disponible */
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap; /* Para que el aside se coloque debajo en pantallas pequeñas */
+            justify-content: center; /* Centra el contenido horizontalmente */
+            align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+        }
+        aside {
+            width: 300px;
+            background-color: #eee;
+            padding: 1em;
+            margin-left: 20px; /* Espacio entre el main y el aside */
+        }
+        .caja {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .circulo {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 50%;
+            border: 1px solid black;
+            margin: 20px auto; /* Centra el círculo */
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        /* Media query para responsive */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column; /* Apila el main y el aside verticalmente */
+                align-items: center; /* Centra los elementos */
+            }
+            aside {
+                width: 90%; /* El aside ocupa casi todo el ancho */
+                margin: 20px 0; /* Margen arriba y abajo */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Título del Sitio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="caja">
+            <button class="boton1">Empezar</button>
+        </div>
+        <div class="circulo"></div>
+        <aside>
+            <h2>Información Adicional</h2>
+            <p>Este es un aside con información complementaria.</p>
+        </aside>
+
+    </main>
+    <footer>
+        <p>&copy; 2023 Todos los derechos reservados</p>
+    </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>

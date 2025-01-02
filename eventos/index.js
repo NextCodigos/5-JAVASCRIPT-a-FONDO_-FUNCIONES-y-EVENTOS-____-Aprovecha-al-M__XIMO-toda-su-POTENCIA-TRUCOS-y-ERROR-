@@ -1,5 +1,6 @@
-const MINOMBRE="Jab";
-const IVA=0.21;
+const MINOMBRE = "OLEG";
+const MINOMBRE2 = "BENI";
+const IVA = 0.21;
 let cantidad = 2;
 let precio = 4;
 
@@ -7,23 +8,27 @@ let precio = 4;
 // que evento
 // funcion que se va a ejecutar
 
-document.querySelector(".boton1").onclick=saludar;
-document.querySelector(".boton1").onclick=calcularIVA;
-document.querySelector(".boton2").addEventListener("click",saludar);
-document.querySelector(".boton2").addEventListener("click",calcularIVA);
+// document.querySelector(".boton1").onclick = saludar;
+document.querySelector(".boton1").onclick = calcularIVA;
+document.querySelector(".boton2").addEventListener("click", saludarOleg);
+// document.querySelector(".boton2").addEventListener("click", calcularIVA);
+document.querySelector(".boton3").addEventListener("click", saludarBeni);
 
 // MINUTO 28
 
-function saludar(){
-    escribir(`Hola ${MINOMBRE}`);
+function saludarOleg() {
+  escribir(`Hola ${MINOMBRE}`);
+}
+function saludarBeni() {
+  escribir(`Hola ${MINOMBRE2}`);
 }
 
-function calcularIVA(){
-  escribir(precio*cantidad*IVA);
+function calcularIVA() {
+  escribir(`${precio} * ${cantidad} * ${IVA} = ${precio * cantidad * IVA}€`);
 }
 
-function escribir(valor){
 
-    // document.querySelector(".caja").innerHTML=valor;
-    document.querySelector(".caja").innerHTML+=`<div>${valor}</div>`;
+function escribir(valor) {
+  // document.querySelector(".caja").innerHTML=valor;
+  document.querySelector(".caja").innerHTML += `<div>${valor}</div>`;
 }
